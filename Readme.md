@@ -8,7 +8,7 @@ This proof shows how events store their inputs on a heap instead of a stack. The
 
 This code works by creating an event and calling it recursively with a counter. It will print the input, check if it should call itself and if so it will call itself with an incremented counter then print out the original counter value. When the 2nd print is written after calling recursively count will be upated to the new value. So if the input is 1 you will see 1, 2, 2 printed. If there was a stack you would expect 1, 2, 1.
 
-Engine output:
+5.5.4 Engine output:
 ```
 LogBlueprintUserMessages: [BP_EventBehavior_C_1] Event Count 1
 LogBlueprintUserMessages: [BP_EventBehavior_C_1] Event Count 2
@@ -24,7 +24,7 @@ This proof shows how pure functions are called when using and not using the exec
 
 This code will call the pure function 3 times, getting a higher result each time. The on the bottom row it will call the pure function with its exec pins. This will cache the output and you will get the same value over and over.
 
-Engine output:
+5.5.4 Engine output:
 ```
 LogBlueprintUserMessages: [BP_PureFunctionBehavior_C_1] Pure call 1 expect 1 1
 LogBlueprintUserMessages: [BP_PureFunctionBehavior_C_1] Pure call 2 expect 2 2
@@ -43,7 +43,7 @@ This proof shows how using a pure function as input to a foreach loop is really 
 
 The pure function keeps a count and prints when it is accessed. There are 2 versions of the loop one without exec pins on the pure function and one with. The bottom version is much better since the pure function is only called once.
 
-Engine output:
+5.5.4 Engine output:
 ```
 LogBlueprintUserMessages: [BP_ForEachBehavior_C_1] Accessed Array through Pure Function 1 times.
 LogBlueprintUserMessages: [BP_ForEachBehavior_C_1] Accessed Array through Pure Function 2 times.
